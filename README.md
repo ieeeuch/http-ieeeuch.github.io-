@@ -1,2 +1,2 @@
-# http-ieeeuch.github.io-
+# ieeeuch.github.io
 http://ieeeuch.github.io/
