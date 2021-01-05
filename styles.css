@@ -199,6 +199,85 @@ body{
     text-align: justify;
 }
 
+/** Gallery **/
+.gallery-section{
+    width:100%;
+    margin:150px 0px ;
+}
+.gallery-container{
+    width: 80%;
+    margin:auto;
+    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,350px);
+}
+.gallery-container .img-card{
+    overflow:hidden;
+}
+.gallery-container .img-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;   
+    transition: 0.5s; 
+}
+.gallery-container .img-card:hover img{
+    transform: scale(1.5) rotate(30deg);
+}
+
+/** Modal Gallery **/
+.modal-gallery{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.9);
+    padding:40px;
+    z-index: 99999;
+    display: none;
+}
+.modal-gallery .close-modal{
+    position: absolute;
+    top:20px;
+    right: 20px;
+    color:#fff;
+    font-size:30px;
+    cursor: pointer;
+}
+.modal-gallery #imgModal{
+    width:60%;
+    margin:auto;
+    display: block;
+    height: 400px;
+    object-fit: cover;
+}
+.modal-gallery .captionModal{
+     color:#fff;
+     display:flex;
+     justify-content: center;
+     font-size:19px;
+     margin:20px 0px;
+}
+.gallery-list{
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-template-rows: repeat(1,100px);
+}
+.gallery-list img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.gallery-list img:hover{
+    opacity:0.5;
+}
+
 /** Go Top **/
 .go-top{
     position: fixed;
@@ -237,4 +316,3 @@ body{
     color:#ffff;
     font-size: 20px;
 }
-
